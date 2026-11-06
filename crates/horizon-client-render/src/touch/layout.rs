@@ -261,6 +261,7 @@ impl Settings {
             .and_then(|b| serde_json::from_slice(&b).ok())
             .unwrap_or_default();
         s.sanitize();
+        s.import_pojav_layout(path);
         // Restore the original top-row spacing without moving custom layouts.
         for row in &mut s.layouts {
             for (control, old, new) in [

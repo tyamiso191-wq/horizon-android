@@ -7,6 +7,7 @@ use std::{
 };
 const HOLD_DELAY: Duration = Duration::from_millis(350);
 mod custom;
+mod pojav_import;
 mod editor;
 pub use custom::CustomButton;
 pub mod layout;
